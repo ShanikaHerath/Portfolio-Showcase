@@ -8,21 +8,21 @@
     
     <div class="profile-content">
       <div class="avatar-container">
-        <!-- Using a placeholder image for avatar -->
+        <!-- Using a generic placeholder image for avatar -->
         <van-image
           round
           width="120"
           height="120"
-          src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
           fit="cover"
           class="avatar-img"
         />
       </div>
       
-      <h1 class="author-name font-serif text-accent">E. A. Poe</h1>
+      <h1 class="author-name font-serif text-accent">Alex Morgan</h1>
       
       <div class="tagline-container">
-        <p class="tagline typewriter">Whispering tales from the shadows...</p>
+        <p class="tagline typewriter">Creative Developer & Designer</p>
       </div>
     </div>
   </div>
@@ -58,13 +58,14 @@ defineEmits(['toggle-theme']);
 
 .avatar-img {
   border: 2px solid var(--bg-color);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 16px rgba(229, 9, 20, 0.2);
 }
 
 .author-name {
   font-size: 2.5rem;
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.5px;
+  text-transform: uppercase;
 }
 
 .tagline-container {
@@ -74,8 +75,9 @@ defineEmits(['toggle-theme']);
 .tagline {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  font-style: italic;
+  font-weight: 300;
   margin: 0;
   display: inline-block;
+  letter-spacing: 1px;
 }
 </style>

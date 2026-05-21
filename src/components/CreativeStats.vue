@@ -3,35 +3,34 @@
     <van-grid :border="false" :column-num="3" :gutter="10">
       <van-grid-item class="stat-item glass">
         <div class="stat-content">
-          <van-icon name="award-o" size="24" color="var(--accent-color)" />
-          <h4>4</h4>
-          <p>Awards</p>
+          <van-icon name="chart-trending-o" size="24" color="var(--accent-color)" />
+          <h4>5+</h4>
+          <p>Years Exp</p>
         </div>
       </van-grid-item>
       <van-grid-item class="stat-item glass">
         <div class="stat-content">
-          <van-icon name="fire-o" size="24" color="var(--accent-color)" />
-          <h4>10k+</h4>
-          <p>Readers</p>
+          <van-icon name="apps-o" size="24" color="var(--accent-color)" />
+          <h4>50+</h4>
+          <p>Projects</p>
         </div>
       </van-grid-item>
       <van-grid-item class="stat-item glass">
         <div class="stat-content">
           <van-icon name="smile-o" size="24" color="var(--accent-color)" />
-          <h4>402</h4>
-          <p>Coffees</p>
+          <h4>100%</h4>
+          <p>Satisfaction</p>
         </div>
       </van-grid-item>
     </van-grid>
 
-    <div class="quote-generator glass">
-      <div class="quote-content">
-        <van-icon name="quotes-left" class="quote-icon" />
-        <p class="quote-text font-serif">"{{ currentQuote }}"</p>
+    <div class="skills-container glass">
+      <h3 class="font-serif">Core Expertise</h3>
+      <div class="skills-tags">
+        <span class="skill-tag" v-for="(skill, index) in skills" :key="index">
+          {{ skill }}
+        </span>
       </div>
-      <van-button size="small" type="primary" plain round @click="generateQuote" class="generate-btn">
-        Another Whisper
-      </van-button>
     </div>
   </div>
 </template>
@@ -39,20 +38,15 @@
 <script setup>
 import { ref } from 'vue';
 
-const quotes = [
-  "Words have no power to impress the mind without the exquisite horror of their reality.",
-  "All that we see or seem is but a dream within a dream.",
-  "I became insane, with long intervals of horrible sanity.",
-  "Never to suffer would never to have been blessed.",
-  "Deep into that darkness peering, long I stood there, wondering, fearing..."
-];
-
-const currentQuote = ref(quotes[0]);
-
-const generateQuote = () => {
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  currentQuote.value = quotes[randomIndex];
-};
+const skills = ref([
+  'Vue.js & React',
+  'UI/UX Design',
+  'Node.js',
+  'TypeScript',
+  'Tailwind CSS',
+  'Figma',
+  'Agile Workflow'
+]);
 </script>
 
 <style scoped>
@@ -84,33 +78,39 @@ const generateQuote = () => {
   letter-spacing: 1px;
 }
 
-.quote-generator {
+.skills-container {
   margin-top: 1.5rem;
   padding: 1.5rem;
   text-align: center;
-  position: relative;
 }
 
-.quote-icon {
-  font-size: 2rem;
-  color: var(--border-color);
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
-
-.quote-text {
-  font-size: 1.1rem;
+.skills-container h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
   color: var(--text-primary);
-  font-style: italic;
-  margin: 1rem 0;
-  min-height: 3.5rem;
+  font-size: 1.4rem;
+}
+
+.skills-tags {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   justify-content: center;
 }
 
-.generate-btn {
-  margin-top: 0.5rem;
+.skill-tag {
+  background-color: rgba(229, 9, 20, 0.1);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent-color);
+  color: #fff;
 }
 </style>

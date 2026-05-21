@@ -1,22 +1,22 @@
 <template>
   <div class="footer-section fade-in" style="animation-delay: 0.8s;">
-    <h2 class="section-title font-serif">Connect</h2>
-    <p class="contact-desc">Send a raven or simply reach out through the ether.</p>
+    <h2 class="section-title font-serif">Let's Connect</h2>
+    <p class="contact-desc">Available for freelance opportunities and collaborations.</p>
     
     <div class="social-links">
-      <van-button icon="envelop-o" type="default" round plain class="social-btn glass" @click="contactEmail">Email</van-button>
-      <van-button icon="twitter-o" type="default" round plain class="social-btn glass" @click="showShare = true">Share</van-button>
+      <van-button icon="envelop-o" type="default" round plain class="social-btn glass" @click="contactEmail">Email Me</van-button>
+      <van-button icon="share-o" type="default" round plain class="social-btn glass" @click="showShare = true">Network</van-button>
     </div>
 
     <van-share-sheet
       v-model:show="showShare"
-      title="Share the shadows"
+      title="Connect with me"
       :options="shareOptions"
       @select="onShareSelect"
     />
 
     <div class="footer-bottom">
-      <p>&copy; 2026 E. A. Poe. All rights reserved.</p>
+      <p>&copy; {{ new Date().getFullYear() }} Generic Profile Template. All rights reserved.</p>
     </div>
   </div>
 </template>
@@ -27,20 +27,20 @@ import { showToast } from 'vant';
 
 const showShare = ref(false);
 const shareOptions = [
-  { name: 'Twitter', icon: 'twitter' },
-  { name: 'Link', icon: 'link' },
-  { name: 'Poster', icon: 'poster' }
+  { name: 'LinkedIn', icon: 'link' },
+  { name: 'GitHub', icon: 'weapp-qrcode' }, // Using weapp-qrcode as a generic dev icon substitute
+  { name: 'Twitter', icon: 'twitter' }
 ];
 
 const contactEmail = () => {
-  showToast('Opening raven courier service...');
+  showToast('Opening email client...');
   setTimeout(() => {
-    window.location.href = 'mailto:author@example.com';
+    window.location.href = 'mailto:hello@example.com';
   }, 1000);
 };
 
 const onShareSelect = (option) => {
-  showToast(`Shared via ${option.name}`);
+  showToast(`Redirecting to ${option.name}...`);
   showShare.value = false;
 };
 </script>

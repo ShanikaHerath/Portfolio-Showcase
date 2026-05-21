@@ -1,29 +1,28 @@
 <template>
   <div class="about-section glass fade-in" style="animation-delay: 0.2s;">
-    <h2 class="section-title font-serif">The Journey</h2>
+    <h2 class="section-title font-serif">Professional Experience</h2>
     <div class="bio-text">
       <p>
-        I am a weaver of words, lost in the labyrinth of dark fantasy and psychological thrillers. 
-        My ink flows with the tears of forgotten ghosts and the whispers of midnight winds.
+        I am a versatile professional specializing in building digital experiences. With a strong foundation in modern web technologies and a keen eye for design, I bridge the gap between aesthetics and functionality.
       </p>
     </div>
     
     <div class="timeline-container">
       <van-steps direction="vertical" :active="2" active-color="var(--accent-color)">
         <van-step>
-          <h3 class="font-serif">The First Whisper</h3>
-          <p>Published first short story in "Midnight Tales"</p>
-          <span class="year">2015</span>
+          <h3 class="font-serif">Junior Developer</h3>
+          <p>Started journey crafting responsive UI components</p>
+          <span class="year">2018 - 2020</span>
         </van-step>
         <van-step>
-          <h3 class="font-serif">The Raven's Call</h3>
-          <p>Debut novel hit the bestseller lists</p>
-          <span class="year">2018</span>
+          <h3 class="font-serif">UI/UX Designer & Developer</h3>
+          <p>Led frontend development for high-traffic platforms</p>
+          <span class="year">2020 - 2023</span>
         </van-step>
         <van-step>
-          <h3 class="font-serif">Echoes in the Dark</h3>
-          <p>Latest masterpiece currently sweeping the globe</p>
-          <span class="year">2023</span>
+          <h3 class="font-serif">Senior Creative Developer</h3>
+          <p>Architecting scalable solutions and mentoring teams</p>
+          <span class="year">2023 - Present</span>
         </van-step>
       </van-steps>
     </div>
