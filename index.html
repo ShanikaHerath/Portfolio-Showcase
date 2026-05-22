@@ -32,7 +32,8 @@
         --font-serif: 'Playfair Display', serif;
         --font-sans: 'Inter', sans-serif;
       }
-      html { font-size: 16px; background-color: var(--navy); }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { font-size: 16px; background-color: var(--navy); overflow-x: hidden; }
       @media (min-width: 768px) { html { font-size: 18px; } }
       body {
         margin: 0;
@@ -42,7 +43,7 @@
         font-family: var(--font-sans);
         overflow-x: hidden;
       }
-      #app { display: block; width: 100vw; }
+      #app { display: block; width: 100%; }
     </style>
   </head>
   <body>

@@ -186,7 +186,7 @@ a, button, .van-button, .social-icon, .menu-link {
 /* Ensure padding on sides is standard 16px container padding for mobile */
 .content-container {
   max-width: 1200px;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   padding-left: calc(var(--space-unit) * 2); /* 16px sides */
   padding-right: calc(var(--space-unit) * 2);

@@ -66,7 +66,7 @@ onUnmounted(() => {
 
 <style scoped>
 .stats-section {
-  width: 100vw;
+  width: 100%;
   padding: 6rem 2rem;
   background-color: var(--navy);
   border-top: 1px solid rgba(212, 175, 55, 0.1);

@@ -77,21 +77,29 @@ const projects = ref([
 const imageContainers = ref([])
 let observer = null
 
+let ticking = false
+
 const handleScroll = () => {
   if (!imageContainers.value) return
   
-  imageContainers.value.forEach(container => {
-    if (!container) return
-    const rect = container.getBoundingClientRect()
-    const wrapper = container.querySelector('.parallax-wrapper')
-    
-    if (wrapper) {
-      // Calculate offset based on distance from center of viewport
-      const yOffset = (rect.top - window.innerHeight / 2) * 0.15
-      // Apply translation directly via JS (no CSS transition to avoid jitter)
-      wrapper.style.transform = `translate3d(0, ${yOffset}px, 0)`
-    }
-  })
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      imageContainers.value.forEach(container => {
+        if (!container) return
+        const rect = container.getBoundingClientRect()
+        const wrapper = container.querySelector('.parallax-wrapper')
+        
+        if (wrapper) {
+          // Calculate offset based on distance from center of viewport
+          const yOffset = (rect.top - window.innerHeight / 2) * 0.15
+          // Apply translation directly via JS (no CSS transition to avoid jitter)
+          wrapper.style.transform = `translate3d(0, ${yOffset}px, 0)`
+        }
+      })
+      ticking = false
+    })
+    ticking = true
+  }
 }
 
 onMounted(() => {
@@ -121,7 +129,7 @@ onUnmounted(() => {
 
 <style scoped>
 .portfolio-section {
-  width: 100vw;
+  width: 100%;
   padding: 8rem 0; /* Vertical padding, horizontal handled by wrappers */
   background-color: var(--navy);
   position: relative;

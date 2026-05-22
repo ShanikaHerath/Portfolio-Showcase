@@ -97,7 +97,7 @@ onUnmounted(() => {
 
 <style scoped>
 .testimonials-section {
-  width: 100vw;
+  width: 100%;
   padding: 8rem 0;
   /* Slightly darker background to contrast with cards */
   background-color: #060b14;

@@ -75,7 +75,7 @@
 
 <style scoped>
 .luxury-footer {
-  width: 100vw;
+  width: 100%;
   /* Background: Dark navy with no jarring transition from Contact */
   background-color: var(--navy); 
   position: relative;

@@ -58,7 +58,7 @@
 
 <style scoped>
 .about-section {
-  width: 100vw;
+  width: 100%;
   /* Empty space strategy: very generous padding */
   padding: 10rem 2rem;
   background-color: var(--navy);

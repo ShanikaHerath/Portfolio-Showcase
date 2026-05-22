@@ -122,7 +122,7 @@ const handleSubmit = () => {
 
 <style scoped>
 .contact-section {
-  width: 100vw;
+  width: 100%;
   padding: 8rem 2rem;
   background-color: var(--navy);
   position: relative;

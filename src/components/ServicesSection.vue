@@ -55,7 +55,7 @@ const services = [
 
 <style scoped>
 .services-section {
-  width: 100vw;
+  width: 100%;
   padding: 8rem 2rem;
   background-color: var(--navy);
   /* Alternating subtle background pattern */

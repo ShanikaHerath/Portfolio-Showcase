@@ -153,7 +153,7 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   background: rgba(10, 22, 40, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -221,5 +221,11 @@ onUnmounted(() => {
   height: 1px;
   background-color: rgba(212, 175, 55, 0.4); /* Subtle gold divider */
   margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 1rem 1.25rem;
+  }
 }
 </style>

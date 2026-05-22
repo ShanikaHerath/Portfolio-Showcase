@@ -65,8 +65,8 @@ const magneticStyle = computed(() => {
 <style scoped>
 .hero-container {
   position: relative;
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
