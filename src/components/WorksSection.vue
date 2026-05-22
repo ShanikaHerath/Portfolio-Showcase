@@ -53,14 +53,14 @@ const projects = ref([
   { 
     title: 'Aura Residences', 
     category: 'Interior Architecture', 
-    image: '/portfolio_1.png', 
+    image: '/portfolio_1.webp', 
     hovered: false, 
     inView: false 
   },
   { 
     title: 'Chrono Horizon', 
     category: 'Product Design', 
-    image: '/portfolio_2.png', 
+    image: '/portfolio_2.webp', 
     hovered: false, 
     inView: false 
   }
