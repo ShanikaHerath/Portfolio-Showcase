@@ -170,7 +170,7 @@ onUnmounted(() => {
   overflow: hidden;
   /* Uncommon styling: Image corners have subtle rounded borders (8px) */
   border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-luxury);
   background-color: #000; /* Fallback */
 }
 

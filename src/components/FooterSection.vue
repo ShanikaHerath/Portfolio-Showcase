@@ -157,7 +157,7 @@
 .newsletter-form {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid var(--gray-inactive);
   padding-bottom: 8px;
   transition: border-color 0.3s ease;
 }

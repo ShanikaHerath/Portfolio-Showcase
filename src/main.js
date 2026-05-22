@@ -52,3 +52,13 @@ document.addEventListener("click", function (e) {
   }
 });
 
+
+// Uncommon touch: subtle hue rotate on scroll
+window.addEventListener("scroll", () => {
+  // Max hue rotation of 15deg based on scroll depth
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollRatio = Math.min(window.scrollY / maxScroll, 1);
+  const hueDeg = scrollRatio * 15;
+  document.documentElement.style.setProperty("--scroll-hue", `${hueDeg}deg`);
+});
+

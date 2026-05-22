@@ -195,7 +195,7 @@ input, textarea {
   background: transparent;
   border: none;
   /* Gold bottom border (2px) */
-  border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+  border-bottom: 2px solid var(--gray-inactive);
   color: var(--soft-white);
   font-family: 'Inter', sans-serif;
   font-size: 1.05rem;
@@ -262,7 +262,7 @@ input:focus, textarea:focus {
 .submit-btn {
   /* Gold background (#d4af37), white text */
   background-color: var(--gold);
-  color: #ffffff;
+  color: var(--soft-white);
   border: 1px solid var(--gold);
   /* Large padding (16px 32px) */
   padding: 16px 32px;
@@ -278,8 +278,8 @@ input:focus, textarea:focus {
 
 /* Button hover: Slight darken effect or white border on gold background */
 .submit-btn:hover {
-  background-color: #bfa132; /* Slightly darkened gold */
-  border: 1px solid #ffffff;
+  background-color: var(--gold-light);
+  border: 1px solid var(--gold-light);
   box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 

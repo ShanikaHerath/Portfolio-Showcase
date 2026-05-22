@@ -114,7 +114,7 @@ const magneticStyle = computed(() => {
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, var(--gold), rgba(212, 175, 55, 0.2));
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.2);
+  box-shadow: var(--shadow-luxury), 0 0 25px rgba(212, 175, 55, 0.2);
 }
 
 .profile-image {
@@ -157,7 +157,7 @@ const magneticStyle = computed(() => {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 3rem 2rem;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-luxury);
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -202,6 +202,8 @@ const magneticStyle = computed(() => {
 
 :deep(.cta-button:hover),
 :deep(.cta-button:active) {
+  background-color: var(--gold-light) !important;
+  border-color: var(--gold-light) !important;
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.4) !important;
 }
 
