@@ -90,8 +90,7 @@ The project uses a custom design system managed via CSS variables in `style.css`
 
 ## 🤝 Contact & Social
 * **GitHub**: [@ShanikaHerath](https://github.com/ShanikaHerath)
-* **LinkedIn**: *(Add LinkedIn Link)*
-* **Email**: *(Add Email Address)*
+* **LinkedIn**: *(www.linkedin.com/in/shanika-herath)*
 
----
+
 *Designed & Developed by Shanika Herath*
