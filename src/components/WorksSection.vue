@@ -21,13 +21,21 @@
           <div class="image-container" ref="imageContainers">
             
             <div class="parallax-wrapper">
+            <picture>
+              <source :srcset="project.image" type="image/webp">
+              <source :srcset="project.image.replace('.webp', '.png')" type="image/png">
               <img 
-                :src="project.image" 
+                :src="project.image.replace('.webp', '.png')" 
                 :alt="project.title" 
                 class="parallax-img" 
                 :class="{ 'is-hovered': project.hovered }" 
                 v-image-reveal
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="450"
               />
+            </picture>
             </div>
             
             <div class="overlay" :class="{ 'is-hovered': project.hovered }">

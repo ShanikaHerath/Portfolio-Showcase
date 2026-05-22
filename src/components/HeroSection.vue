@@ -5,7 +5,11 @@
     <div class="content-wrapper">
       <div class="profile-container" v-reveal>
         <div class="image-frame" :style="magneticStyle">
-          <img src="/profile.webp" alt="Profile" class="profile-image" />
+          <picture>
+            <source srcset="/profile.webp" type="image/webp">
+            <source srcset="/profile.png" type="image/png">
+            <img src="/profile.png" alt="Profile" class="profile-image" width="160" height="160" loading="lazy" decoding="async" />
+          </picture>
         </div>
       </div>
       
