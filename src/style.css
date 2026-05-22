@@ -1,0 +1,82 @@
+:root {
+  --navy: #0a1628;
+  --gold: #d4af37;
+  --soft-white: #f5f5f5;
+  --luxury-timing: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  --luxury-ripple-color: rgba(212, 175, 55, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--navy);
+  color: var(--soft-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Global Animation Classes */
+html {
+  /* Using native smooth scroll for basic anchor linking if JS is bypassed */
+  /* scroll-behavior: smooth; disabled for custom JS scrolling */
+}
+
+/* Reveal Directive Classes */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--luxury-timing), transform var(--luxury-timing);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ripple Directive Styles */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--luxury-ripple-color);
+  transform: scale(0);
+  animation: rippleAnimation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+
+/* Image Reveal Directive Classes */
+.image-reveal-init {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.8s ease-out, transform 1.2s var(--luxury-timing);
+  will-change: opacity, transform;
+}
+
+.image-reveal-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
